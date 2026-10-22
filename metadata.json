@@ -1,0 +1,6 @@
+{
+  "name": "WorthWyl Writer",
+  "description": "Comprehensive long-form novel and autobiography media pipeline with episodic continuity reflection, manuscript proofreading, sequel forging, book cover studio, and Amazon KDP publishing hub.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

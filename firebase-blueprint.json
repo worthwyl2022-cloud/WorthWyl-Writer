@@ -1,0 +1,66 @@
+{
+  "entities": {
+    "Novel": {
+      "title": "Novel",
+      "description": "Represents the novel project.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "genre": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "title", "genre", "status", "createdAt", "updatedAt"]
+    },
+    "Episode": {
+      "title": "Episode",
+      "description": "Represents an episode of a novel.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "novelId": { "type": "string" },
+        "episodeNumber": { "type": "number" },
+        "text": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "novelId", "episodeNumber", "text", "createdAt"]
+    },
+    "EpisodeSnapshot": {
+      "title": "EpisodeSnapshot",
+      "description": "Represents a snapshot of an episode.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "novelId": { "type": "string" },
+        "episodeNumber": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "text": { "type": "string" },
+        "screenshotUrl": { "type": "string" },
+        "characters": { "type": "array" },
+        "locations": { "type": "array" },
+        "tags": { "type": "array" },
+        "tone": { "type": "string" },
+        "pacing": { "type": "string" },
+        "openThreads": { "type": "array" },
+        "resolvedThreads": { "type": "array" }
+      },
+      "required": ["id", "novelId", "episodeNumber", "createdAt", "text", "screenshotUrl", "characters", "locations", "tags", "tone", "pacing", "openThreads", "resolvedThreads"]
+    }
+  },
+  "firestore": {
+    "/novels/{novelId}": {
+      "schema": "Novel",
+      "description": "Collection of novels."
+    },
+    "/novels/{novelId}/episodes/{episodeId}": {
+      "schema": "Episode",
+      "description": "Collection of episodes per novel."
+    },
+    "/snapshots/{snapshotId}": {
+      "schema": "EpisodeSnapshot",
+      "description": "Collection of episode snapshots."
+    }
+  }
+}
