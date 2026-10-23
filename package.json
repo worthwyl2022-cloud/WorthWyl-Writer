@@ -1,8 +1,11 @@
 {
-  "name": "react-example",
+  "name": "worthwyl-writer",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
+  "description": "WorthWyl Writer — long-form novel and autobiography media pipeline",
+  "author": "Wyl Mathes <worthwyl2022@gmail.com>",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "tsx server.ts",
     "start": "tsx server.ts",
